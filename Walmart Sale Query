@@ -51,7 +51,7 @@ FROM sale.walmart_salee;
 
 /*--- 3.What is the most selling product line? -----*/
 
-SELECT Product_line , COUNT(Quantity) AS total_qty
+SELECT Product_line , SUM(Quantity) AS total_qty
 FROM sale.walmart_salee 
 GROUP BY Product_line
 ORDER BY total_qty DESC;
